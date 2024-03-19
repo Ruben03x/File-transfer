@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #91C8E4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project2.GUI_Receiver">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Port number:" textAlignment="RIGHT" wrappingWidth="245.797607421875">
+               <font>
+                  <Font name="Javanese Text" size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="textPort" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="15.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="btnSetPort" mnemonicParsing="false" onAction="#setPort" style="-fx-background-color: #749BC2;" text="Set port" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Files received:" textAlignment="CENTER" wrappingWidth="678.8315505981445">
+         <font>
+            <Font name="Javanese Text" size="24.0" />
+         </font>
+      </Text>
+      <ListView fx:id="listReceived" prefHeight="200.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+      </ListView>
+      <ProgressBar fx:id="barProgress" prefHeight="70.0" prefWidth="640.0" progress="0.0">
+         <padding>
+            <Insets left="50.0" top="50.0" />
+         </padding>
+      </ProgressBar>
+      <Button  fx:id="btnSave" onAction="#saveFile" mnemonicParsing="false" style="-fx-background-color: #749BC2;" text="Save files" textFill="WHITE">
+         <VBox.margin>
+            <Insets left="315.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>
